@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - ShopSmart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="login-split">
+        <!-- Left Illustration Side -->
+        <div class="login-left">
+            <img src="assets/login_bg.png" alt="3D Illustration" />
+        </div>
+
+        <!-- Right Form Side -->
+        <div class="login-right">
+            <div class="login-header">
+                <span>Not a member? </span>
+                <a href="#">Register now</a>
+            </div>
+
+            <div class="login-form-wrapper">
+                <h1 class="poppins">Hello Again!</h1>
+                <p>Welcome back, you've been missed!</p>
+
+                <form action="index.html">
+                    <div class="input-group">
+                        <input type="email" placeholder="Admin@ecommerce.com" value="Admin@ecommerce.com" required />
+                    </div>
+                    <div class="input-group" style="position: relative;">
+                        <input type="password" placeholder="Password" value="password123" required />
+                        <i class="fa-regular fa-eye-slash"
+                            style="position: absolute; right: 20px; top: 18px; color: var(--text-muted); cursor: pointer;"></i>
+                    </div>
+
+                    <a href="#" class="recovery-link">Recovery Password</a>
+
+                    <button type="submit" class="login-btn">Sign In</button>
+
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn"><i class="fa-brands fa-google"
+                                style="color:#DB4437;"></i></button>
+                        <button type="button" class="social-btn"><i class="fa-brands fa-apple"></i></button>
+                        <button type="button" class="social-btn"><i class="fa-brands fa-facebook-f"
+                                style="color:#1877F2;"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button class="theme-toggle-fixed" id="themeToggleBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

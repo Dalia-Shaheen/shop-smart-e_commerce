@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header class="container navbar">
+        <div class="nav-logo">ShopSmart</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="search-bar">
+                <i class="fa-solid fa-search" style="color:var(--text-muted)"></i>
+                <input type="text" placeholder="Search products...">
+            </div>
+            <a href="#" class="cart-icon"
+                style="position:relative; font-size: 20px; color: var(--text-main); margin-right: 12px;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count"
+                    style="position:absolute; top:-8px; right:-10px; background:var(--primary-color); color:#fff; font-size:10px; font-weight:bold; width:18px; height:18px; border-radius:50%; display:none; align-items:center; justify-content:center;">0</span>
+            </a>
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="login.html" class="btn btn-dark">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <img src="assets/hero_bg.png" alt="Hero Background">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="badge">SPECIAL OFFER</span>
+                <h1>Up to 50% Off</h1>
+                <p>Limited time deals on top products</p>
+                <a href="#" class="btn btn-primary"
+                    style="background:#fff; color:#000; padding: 12px 32px; border-radius: 30px;">View Deals <i
+                        class="fa-solid fa-arrow-right" style="margin-left:8px"></i></a>
+            </div>
+        </section>
+
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon blue"><i class="fa-solid fa-truck"></i></div>
+                <div class="feature-text">
+                    <h4>Free Shipping</h4>
+                    <p>Free shipping on all orders over $50. Fast and reliable delivery.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon green"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="feature-text">
+                    <h4>Secure Payment</h4>
+                    <p>Your payment information is processed securely. We set strict data protection standards.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon purple"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                <div class="feature-text">
+                    <h4>Easy Returns</h4>
+                    <p>14-day return policy. Not satisfied? Return it hassle-free.</p>
+                </div>
+            </div>
+
+            <button class="theme-toggle" id="themeToggleBtn"
+                style="width:50px; height:50px; background:var(--text-main); color:var(--bg-color); border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.1); display:flex; align-items:center; justify-content:center; font-size:18px;">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <section>
+            <div class="section-header">
+                <h2 class="poppins">Shop by Category</h2>
+                <p>Explore our wide range of products</p>
+            </div>
+            <div class="categories">
+                <div class="category-card" data-category="all" style="border-color: var(--text-main);">
+                    <div class="category-icon" style="background:var(--text-main); color:var(--bg-color)"><i
+                            class="fa-solid fa-border-all"></i></div>
+                    <h4>All</h4>
+                </div>
+                <div class="category-card" data-category="electronics">
+                    <div class="category-icon c1"><i class="fa-solid fa-laptop"></i></div>
+                    <h4>Electronics</h4>
+                </div>
+                <div class="category-card" data-category="fashion">
+                    <div class="category-icon c2"><i class="fa-solid fa-shirt"></i></div>
+                    <h4>Fashion</h4>
+                </div>
+                <div class="category-card" data-category="home">
+                    <div class="category-icon c3"><i class="fa-solid fa-couch"></i></div>
+                    <h4>Home & Living</h4>
+                </div>
+                <div class="category-card" data-category="sports">
+                    <div class="category-icon c4"><i class="fa-solid fa-basketball"></i></div>
+                    <h4>Sports</h4>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">
+                <span
+                    style="color:var(--text-muted); font-size:12px; margin-bottom:8px; display:inline-block; font-weight:600;"><i
+                        class="fa-solid fa-fire" style="color:red"></i> Trending Now</span>
+                <h2 class="poppins">Featured Products</h2>
+                <p>Check out our handpicked selection of trending products</p>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Products injected by JS -->
+            </div>
+
+            <div class="text-center" style="margin-bottom: 80px;">
+                <a href="#" class="btn btn-outline" style="min-width: 200px;">View All Products</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        <div class="newsletter-banner">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter and get exclusive deals delivered to your inbox!</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-col" style="grid-column: span 2;">
+                <h4 class="nav-logo" style="margin-bottom:8px">ShopSmart</h4>
+                <p style="max-width:300px">Discover quality products at top prices. Your #1 destination for shopping
+                    without leaving the comfort of your house.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
